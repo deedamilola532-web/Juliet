@@ -170,6 +170,22 @@ dialog img{max-width:100%;max-height:calc(100dvh - 100px);object-fit:contain;cur
 .ti b{display:block;font:600 1.15rem var(--serif);line-height:1.2}.ti small{display:block;font:400 .83rem/1.45 var(--sans);color:var(--ink2);margin-top:.25rem}
 @media(min-width:901px){.hr img{object-position:50% 16%}}
 .ic{display:grid;place-items:center;height:104px;background:#fbf8f0;border:1px solid var(--line);margin-bottom:.9rem;transition:.35s}.ic svg{width:52px;height:52px}.ic.wide svg{width:84px;height:auto}.ic.dk{background:var(--navy);border-color:var(--navy)}.ic.lmt{background:var(--navy);border-color:var(--navy)}.ic.lmt span{font:600 2.6rem var(--serif);color:var(--gold)}.ti:hover .ic{transform:translateY(-3px)}
+/* mobile hero: photo first, nothing over her face */
+@media(max-width:900px){
+.hero{padding-top:64px}
+.hr{display:block;min-height:0;overflow:hidden;padding:1.5rem 1.5rem 0}
+.hr:before{inset:.9rem .9rem 0}
+.hr img{display:block;width:100%;max-width:520px;height:auto;max-height:none;aspect-ratio:1/1;object-fit:cover;object-position:50% 8%;margin:0 auto}
+.hr .vt{display:none}
+.hr .badge{position:relative;left:auto;bottom:auto;max-width:none;width:calc(100% - 3rem);margin:0 auto;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;z-index:3;transform:translateY(0)}
+.hr .badge b{font-size:2.2rem}
+.hr .badge span{display:block}
+.hr{padding-bottom:1.5rem}
+}
+/* desktop hero: photo sits inside the gold frame */
+@media(min-width:901px){
+.hr img{inset:clamp(2.2rem,4.6vw,3.9rem) clamp(2.2rem,4.6vw,3.9rem) 0;width:calc(100% - 2*clamp(2.2rem,4.6vw,3.9rem));height:calc(100% - clamp(2.2rem,4.6vw,3.9rem));object-fit:cover;object-position:50% 0}
+}
 </style></head><body>
 <header id="hd"><a class="logo" href="#top">Juliet<b>.</b></a>
 <nav aria-label="Main"><button id="mb" aria-label="Menu" aria-expanded="false">☰</button>
